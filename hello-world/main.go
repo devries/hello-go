@@ -58,7 +58,8 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 		Body:       fmt.Sprintf("%s, %v", firstWord, string(ip)),
 		StatusCode: 200,
 		Headers: map[string]string{
-			"X-Massive-Info": "Lines",
+			"X-Massive-Info":              "Lines",
+			"Access-Control-Allow-Origin": "*",
 		},
 	}, nil
 }

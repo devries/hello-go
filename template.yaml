@@ -11,6 +11,9 @@ Resources:
     Type: AWS::Serverless::Api
     Properties:
       StageName: v1
+      Tags:
+        Project: Internal
+      Cors: "'*'"
   HelloWorldFunction:
     Type: AWS::Serverless::Function 
     Properties:
@@ -28,6 +31,8 @@ Resources:
       Environment: 
         Variables:
           EXTRA: "Ready to Go"
+      Tags:
+        Project: Internal
 
 Outputs:
   HelloWorldAPI:
