@@ -1,4 +1,4 @@
-.PHONY: deps clean build
+.PHONY: deps clean build package deploy destroy
 
 deps:
 	go get -u ./...
